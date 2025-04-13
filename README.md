@@ -1,53 +1,47 @@
-***ChemBERTa Regression***
-Ce projet implémente un pipeline de régression chimique basé sur ChemBERTa, un modèle pré-entraîné pour le traitement des représentations moléculaires (SMILES). L'objectif est de prédire des propriétés chimiques (comme le pIC50) à partir de chaînes SMILES en utilisant des embeddings générés par ChemBERTa et un modèle de régression personnalisé.
+# ChemBERTa Regression Project
 
-**Fonctionnalités principales**
-Extraction des embeddings ChemBERTa : Utilisation du modèle pré-entraîné seyonec/ChemBERTa-zinc-base-v1 pour générer des représentations vectorielles (768 dimensions) des molécules.
-Préparation des données : Nettoyage des données, gestion des valeurs manquantes et conversion des SMILES en objets RDKit.
-Entraînement d'un modèle de régression : Utilisation d'un modèle PyTorch personnalisé (SimpleRegressor) pour prédire les propriétés chimiques.
-Évaluation des performances : Calcul des métriques comme le Mean Squared Error (MSE) et le R² (coefficient de détermination) pour évaluer la qualité des prédictions.
-Support GPU : Accélération des calculs grâce à l'utilisation de CUDA si un GPU est disponible.
-Suivi des expériences : Intégration avec Weights & Biases (wandb) pour suivre les pertes, les métriques et les hyperparamètres.
-**Structure du projet**
-chemberta-regression/
-│
-├── src/
-│   ├── train.py               # Script principal pour l'entraînement et l'évaluation
-│   ├── data_loader.py         # Chargement et préparation des données
-│   ├── model.py               # Définition du modèle de régression
-│   ├── utils_functions.py     # Fonctions utilitaires (extraction des embeddings, évaluation)
-│
-├── SMILES_Big_Data_Set.csv    # Jeu de données contenant les SMILES et les propriétés chimiques
-├── requirements.txt           # Liste des dépendances Python
-├── README.md                  # Documentation du projet
-**Dépendances**
-Les principales bibliothèques utilisées dans ce projet incluent :
+This project implements a regression model using ChemBERTa to predict pIC50 values from molecular representations. The model leverages embeddings extracted from molecular structures represented in SMILES format.
 
-PyTorch : Pour l'entraînement du modèle de régression.
-Transformers : Pour charger le modèle ChemBERTa.
-RDKit : Pour manipuler les molécules chimiques.
-pandas et NumPy : Pour la manipulation des données.
-scikit-learn : Pour le calcul des métriques (MSE, R²).
-Weights & Biases (wandb) : Pour le suivi des expériences.
-Installez toutes les dépendances avec :
+## Project Structure
+
+```
+chemberta-regression
+├── data
+│   └── SMILES_Big_Data_Set.csv  # Dataset containing molecular representations and properties
+├── src
+│   ├── __init__.py               # Marks the directory as a Python package
+│   ├── data_loader.py             # Functions to load and preprocess the dataset
+│   ├── model.py                   # Defines the regression model using ChemBERTa
+│   ├── train.py                   # Contains the training loop for the model
+│   └── utils.py                   # Utility functions for data processing and evaluation
+├── requirements.txt               # Lists project dependencies
+└── README.md                      # Documentation for the project
+```
+
+## Installation
+
+To set up the project, clone the repository and install the required dependencies:
+
+```bash
 pip install -r requirements.txt
-Utilisation
-Préparer les données :
-Placez votre fichier CSV contenant les SMILES et les propriétés chimiques dans le dossier racine.
-Assurez-vous que le fichier est correctement formaté (colonnes SMILES et pIC50).
-Exécuter le script d'entraînement :
-python src/train.py
-Suivre les performances :
-Les métriques d'entraînement et de test seront affichées dans la console.
-Les résultats seront également enregistrés dans Weights & Biases si configuré.
-Résultats
-Les embeddings ChemBERTa sont sauvegardés dans un fichier CSV (chemberta_embeddings.csv) pour éviter de les recalculer à chaque exécution.
-Les métriques comme le MSE et le R² sont calculées à chaque époque pour suivre les performances du modèle.
-Améliorations possibles
-Ajouter d'autres métriques comme le MAE (Mean Absolute Error).
-Tester différents modèles de régression (par exemple, réseaux de neurones plus complexes).
-Optimiser les hyperparamètres (taux d'apprentissage, taille des lots, etc.) avec des outils comme wandb sweep.
-Auteur
-Ce projet a été développé pour explorer l'utilisation de modèles pré-entraînés comme ChemBERTa dans des tâches de régression chimique. N'hésitez pas à contribuer ou à poser des questions !
+```
 
-Vous pouvez personnaliser cette description en fonction de vos besoins spécifiques.
+## Usage
+
+1. **Load the Data**: Use the `data_loader.py` to load the dataset and convert RDKit objects to SMILES.
+2. **Train the Model**: Run the `train.py` script to train the regression model on the dataset.
+3. **Evaluate the Model**: The training script will also evaluate the model's performance using metrics like mean squared error.
+
+## Dependencies
+
+This project requires the following Python packages:
+
+- pandas
+- RDKit
+- transformers
+- torch
+- scikit-learn
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
