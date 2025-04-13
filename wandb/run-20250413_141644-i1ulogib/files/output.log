@@ -1,0 +1,9 @@
+Using device: cuda
+CUDA device: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+Traceback (most recent call last):
+  File "c:\Users\benal\OneDrive\Bureau\ChemBerta\TEST1\chemberta-regression\src\train.py", line 44, in <module>
+    tokenizer = AutoTokenizer.from_pretrained(model_name).to(device)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\benal\AppData\Local\Programs\Python\Python313\Lib\site-packages\transformers\tokenization_utils_base.py", line 1108, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: RobertaTokenizerFast has no attribute to

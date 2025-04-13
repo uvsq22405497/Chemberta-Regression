@@ -1,0 +1,16 @@
+{"time":"2025-04-13T14:36:52.378684+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"C:\\Users\\benal\\OneDrive\\Bureau\\ChemBerta\\TEST1\\chemberta-regression\\wandb\\run-20250413_143652-jwcoboe4\\logs\\debug-core.log"}
+{"time":"2025-04-13T14:36:54.1677583+02:00","level":"INFO","msg":"created new stream","id":"jwcoboe4"}
+{"time":"2025-04-13T14:36:54.1677583+02:00","level":"INFO","msg":"stream: started","id":"jwcoboe4"}
+{"time":"2025-04-13T14:36:54.1677583+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:36:54.1677583+02:00","level":"INFO","msg":"sender: started","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:36:54.1677583+02:00","level":"INFO","msg":"handler: started","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:36:54.3655915+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-13T14:44:24.8775764+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-13T14:44:24.8781608+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-13T14:44:25.6582079+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-13T14:44:25.8286666+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-13T14:44:25.8323689+02:00","level":"INFO","msg":"stream: closing","id":"jwcoboe4"}
+{"time":"2025-04-13T14:44:25.8323689+02:00","level":"INFO","msg":"handler: closed","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:44:25.8323689+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:44:25.8323689+02:00","level":"INFO","msg":"sender: closed","stream_id":"jwcoboe4"}
+{"time":"2025-04-13T14:44:25.8323689+02:00","level":"INFO","msg":"stream: closed","id":"jwcoboe4"}

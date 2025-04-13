@@ -1,0 +1,109 @@
+Using device: cuda
+CUDA device: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+SMILES        object
+pIC50        float64
+mol           object
+num_atoms      int64
+logP         float64
+dtype: object
+                                              SMILES  pIC50  ... num_atoms    logP
+0         O=S(=O)(Nc1cccc(-c2cnc3ccccc3n2)c1)c1cccs1   4.26  ...        25  4.1591
+1  O=c1cc(-c2nc(-c3ccc(-c4cn(CCP(=O)(O)O)nn4)cc3)...   4.34  ...        36  3.6743
+2             NC(=O)c1ccc2c(c1)nc(C1CCC(O)CC1)n2CCCO   4.53  ...        23  1.5361
+3                NCCCn1c(C2CCNCC2)nc2cc(C(N)=O)ccc21   4.56  ...        22  0.9510
+4                  CNC(=S)Nc1cccc(-c2cnc3ccccc3n2)c1   4.59  ...        21  3.2130
+
+[5 rows x 5 columns]
+(16087, 5)
+   pIC50  num_atoms    logP
+0   4.26         25  4.1591
+1   4.34         36  3.6743
+2   4.53         23  1.5361
+3   4.56         22  0.9510
+4   4.59         21  3.2130
+(16087, 3)
+Nombre de valeurs NaN dans le dataset : 1050
+Nombre de valeurs infinies dans le dataset : 0
+
+le nombre de valeurs NaN par colonne avant remplacement dans df :
+SMILES          0
+pIC50        1050
+mol             0
+num_atoms       0
+logP            0
+dtype: int64
+
+le nombre de valeurs NaN par colonne après remplacement dans numeric_df :
+pIC50        0
+num_atoms    0
+logP         0
+dtype: int64
+Nombre de valeurs NaN après remplacement : 0
+
+le nombre de valeurs NaN par colonne après remplacement dans df :
+SMILES       0
+pIC50        0
+mol          0
+num_atoms    0
+logP         0
+dtype: int64
+preparing data
+[<class 'str'>]
+0    <rdkit.Chem.rdchem.Mol object at 0x7f59df45bc30>
+1    <rdkit.Chem.rdchem.Mol object at 0x7f59a320c9e0>
+2    <rdkit.Chem.rdchem.Mol object at 0x7f59a320cac0>
+3    <rdkit.Chem.rdchem.Mol object at 0x7f59a320cba0>
+4    <rdkit.Chem.rdchem.Mol object at 0x7f59a320c7b0>
+Name: mol, dtype: object
+[<class 'rdkit.Chem.rdchem.Mol'>]
+
+le nombre de val nan avant le drop: SMILES       0
+pIC50        0
+mol          0
+num_atoms    0
+logP         0
+dtype: int64
+
+le nbr de val nan apres le dop SMILES    0
+pIC50     0
+dtype: int64
+end of preparing data
+
+retour au train apres prepare_data
+Génération des embeddings...
+Nombre de valeurs NaN dans les embeddings : 0
+Nombre de valeurs infinies dans les embeddings : 0
+Embeddings sauvegardés dans chemberta_embeddings.csv
+Embeddings chargés depuis chemberta_embeddings.csv
+Nombre de valeurs NaN dans X : 0
+Nombre de valeurs infinies dans X : 0
+Nombre de valeurs NaN dans y : 0
+Nombre de valeurs infinies dans y : 0
+Nombre de valeurs NaN dans X après remplacement : 0
+Nombre de valeurs infinies dans X après remplacement : 0
+Nombre de valeurs NaN dans y après remplacement : 0
+Nombre de valeurs infinies dans y après remplacement : 0
+Nombre de valeurs NaN dans X_train : 0
+Nombre de valeurs infinies dans X_train : 0
+Nombre de valeurs NaN dans y_train : 0
+Nombre de valeurs infinies dans y_train : 0
+Epoch 1/20, Loss: 1.334890977703682
+Epoch 2/20, Loss: 0.6467732312319519
+Epoch 3/20, Loss: 0.5157033805700745
+Epoch 4/20, Loss: 0.42037253070705877
+Epoch 5/20, Loss: 0.35428143435021486
+Epoch 6/20, Loss: 0.3302546558536534
+Epoch 7/20, Loss: 0.2906866614977198
+Epoch 8/20, Loss: 0.24089625884522278
+Epoch 9/20, Loss: 0.2216464924266696
+Epoch 10/20, Loss: 0.21242130905038517
+Epoch 11/20, Loss: 0.18503836575645963
+Epoch 12/20, Loss: 0.18161280999981588
+Epoch 13/20, Loss: 0.1793654865086097
+Epoch 14/20, Loss: 0.16934549505071295
+Epoch 15/20, Loss: 0.1437752513820421
+Epoch 16/20, Loss: 0.14799613743632217
+Epoch 17/20, Loss: 0.13529266557995942
+Epoch 18/20, Loss: 0.1463023069113604
+Epoch 19/20, Loss: 0.1567966166523195
+Epoch 20/20, Loss: 0.12884794686696777

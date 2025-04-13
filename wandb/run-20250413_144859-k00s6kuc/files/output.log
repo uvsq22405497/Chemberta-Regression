@@ -1,0 +1,149 @@
+Using device: cuda
+CUDA device: NVIDIA GeForce RTX 3070 Ti Laptop GPU
+SMILES        object
+pIC50        float64
+mol           object
+num_atoms      int64
+logP         float64
+dtype: object
+                                              SMILES  pIC50  ... num_atoms    logP
+0         O=S(=O)(Nc1cccc(-c2cnc3ccccc3n2)c1)c1cccs1   4.26  ...        25  4.1591
+1  O=c1cc(-c2nc(-c3ccc(-c4cn(CCP(=O)(O)O)nn4)cc3)...   4.34  ...        36  3.6743
+2             NC(=O)c1ccc2c(c1)nc(C1CCC(O)CC1)n2CCCO   4.53  ...        23  1.5361
+3                NCCCn1c(C2CCNCC2)nc2cc(C(N)=O)ccc21   4.56  ...        22  0.9510
+4                  CNC(=S)Nc1cccc(-c2cnc3ccccc3n2)c1   4.59  ...        21  3.2130
+
+[5 rows x 5 columns]
+(16087, 5)
+   pIC50  num_atoms    logP
+0   4.26         25  4.1591
+1   4.34         36  3.6743
+2   4.53         23  1.5361
+3   4.56         22  0.9510
+4   4.59         21  3.2130
+(16087, 3)
+Nombre de valeurs NaN dans le dataset : 1050
+Nombre de valeurs infinies dans le dataset : 0
+
+le nombre de valeurs NaN par colonne avant remplacement dans df :
+SMILES          0
+pIC50        1050
+mol             0
+num_atoms       0
+logP            0
+dtype: int64
+
+le nombre de valeurs NaN par colonne après remplacement dans numeric_df :
+pIC50        0
+num_atoms    0
+logP         0
+dtype: int64
+Nombre de valeurs NaN après remplacement : 0
+
+le nombre de valeurs NaN par colonne après remplacement dans df :
+SMILES       0
+pIC50        0
+mol          0
+num_atoms    0
+logP         0
+dtype: int64
+preparing data
+[<class 'str'>]
+0    <rdkit.Chem.rdchem.Mol object at 0x7f59df45bc30>
+1    <rdkit.Chem.rdchem.Mol object at 0x7f59a320c9e0>
+2    <rdkit.Chem.rdchem.Mol object at 0x7f59a320cac0>
+3    <rdkit.Chem.rdchem.Mol object at 0x7f59a320cba0>
+4    <rdkit.Chem.rdchem.Mol object at 0x7f59a320c7b0>
+Name: mol, dtype: object
+[<class 'rdkit.Chem.rdchem.Mol'>]
+
+le nombre de val nan avant le drop: SMILES       0
+pIC50        0
+mol          0
+num_atoms    0
+logP         0
+dtype: int64
+
+le nbr de val nan apres le dop SMILES    0
+pIC50     0
+dtype: int64
+end of preparing data
+
+retour au train apres prepare_data
+Chargement des embeddings depuis le fichier CSV...
+Nombre de valeurs NaN dans les embeddings : 0
+Nombre de valeurs infinies dans les embeddings : 0
+Embeddings sauvegardés dans chemberta_embeddings.csv
+Embeddings chargés depuis chemberta_embeddings.csv
+Nombre de valeurs NaN dans X : 0
+Nombre de valeurs infinies dans X : 0
+Nombre de valeurs NaN dans y : 0
+Nombre de valeurs infinies dans y : 0
+Nombre de valeurs NaN dans X après remplacement : 0
+Nombre de valeurs infinies dans X après remplacement : 0
+Nombre de valeurs NaN dans y après remplacement : 0
+Nombre de valeurs infinies dans y après remplacement : 0
+Nombre de valeurs NaN dans X_train : 0
+Nombre de valeurs infinies dans X_train : 0
+Nombre de valeurs NaN dans y_train : 0
+Nombre de valeurs infinies dans y_train : 0
+Epoch 1/30, Loss: 1.4025081166299638
+Epoch 1/30, Test MSE: 0.6592466235160828, Test R²: 0.8768407702445984
+Epoch 2/30, Loss: 0.658715720415559
+Epoch 2/30, Test MSE: 0.7116582989692688, Test R²: 0.8670493364334106
+Epoch 3/30, Loss: 0.5263265190442686
+Epoch 3/30, Test MSE: 0.4612831771373749, Test R²: 0.9138239622116089
+Epoch 4/30, Loss: 0.45532185516364077
+Epoch 4/30, Test MSE: 0.3719179630279541, Test R²: 0.9305189847946167
+Epoch 5/30, Loss: 0.37176303299277946
+Epoch 5/30, Test MSE: 0.40210628509521484, Test R²: 0.924879252910614
+Epoch 6/30, Loss: 0.34290559827430966
+Epoch 6/30, Test MSE: 0.34312236309051514, Test R²: 0.9358985424041748
+Epoch 7/30, Loss: 0.315193699957068
+Epoch 7/30, Test MSE: 0.337324857711792, Test R²: 0.9369816184043884
+Epoch 8/30, Loss: 0.2642253062805674
+Epoch 8/30, Test MSE: 0.3036290407180786, Test R²: 0.943276584148407
+Epoch 9/30, Loss: 0.24640199450531017
+Epoch 9/30, Test MSE: 0.2651509940624237, Test R²: 0.9504649639129639
+Epoch 10/30, Loss: 0.2342444194212704
+Epoch 10/30, Test MSE: 0.2887616753578186, Test R²: 0.9460541009902954
+Epoch 11/30, Loss: 0.18402543952388148
+Epoch 11/30, Test MSE: 0.2784665822982788, Test R²: 0.9479774236679077
+Epoch 12/30, Loss: 0.1954048636205328
+Epoch 12/30, Test MSE: 0.274936318397522, Test R²: 0.9486368894577026
+Epoch 13/30, Loss: 0.17711362738171524
+Epoch 13/30, Test MSE: 0.2803565263748169, Test R²: 0.9476243257522583
+Epoch 14/30, Loss: 0.17361602896856831
+Epoch 14/30, Test MSE: 0.25729331374168396, Test R²: 0.951932966709137
+Epoch 15/30, Loss: 0.1485200573484559
+Epoch 15/30, Test MSE: 0.26455792784690857, Test R²: 0.9505757689476013
+Epoch 16/30, Loss: 0.15547175491667783
+Epoch 16/30, Test MSE: 0.2826276421546936, Test R²: 0.9472000598907471
+Epoch 17/30, Loss: 0.14979571763601698
+Epoch 17/30, Test MSE: 0.2886902689933777, Test R²: 0.9460674524307251
+Epoch 18/30, Loss: 0.14709560508393768
+Epoch 18/30, Test MSE: 0.2818857729434967, Test R²: 0.9473386406898499
+Epoch 19/30, Loss: 0.14582113484405998
+Epoch 19/30, Test MSE: 0.2901989221572876, Test R²: 0.9457855820655823
+Epoch 20/30, Loss: 0.1486362635877871
+Epoch 20/30, Test MSE: 0.28042134642601013, Test R²: 0.9476122260093689
+Epoch 21/30, Loss: 0.14618413173420258
+Epoch 21/30, Test MSE: 0.23930694162845612, Test R²: 0.9552931189537048
+Epoch 22/30, Loss: 0.12614819161690974
+Epoch 22/30, Test MSE: 0.2599167227745056, Test R²: 0.9514428377151489
+Epoch 23/30, Loss: 0.12358370720046034
+Epoch 23/30, Test MSE: 0.23122669756412506, Test R²: 0.9568026661872864
+Epoch 24/30, Loss: 0.11099708966088133
+Epoch 24/30, Test MSE: 0.25700390338897705, Test R²: 0.9519870281219482
+Epoch 25/30, Loss: 0.12280112134278856
+Epoch 25/30, Test MSE: 0.24687358736991882, Test R²: 0.9538795351982117
+Epoch 26/30, Loss: 0.120635159736587
+Epoch 26/30, Test MSE: 0.26514023542404175, Test R²: 0.9504669904708862
+Epoch 27/30, Loss: 0.11327207815387372
+Epoch 27/30, Test MSE: 0.32723402976989746, Test R²: 0.9388667345046997
+Epoch 28/30, Loss: 0.10321099516212312
+Epoch 28/30, Test MSE: 0.3040012717247009, Test R²: 0.9432070255279541
+Epoch 29/30, Loss: 0.1130909379063262
+Epoch 29/30, Test MSE: 0.25893521308898926, Test R²: 0.951626181602478
+Epoch 30/30, Loss: 0.10173032265248946
+Epoch 30/30, Test MSE: 0.2446279227733612, Test R²: 0.9542990922927856

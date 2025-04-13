@@ -1,0 +1,10 @@
+pandas
+rdkit
+transformers
+torch
+scikit-learn
+wandb
+numpy
+scipy
+scikit-learn
+tqdm

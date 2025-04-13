@@ -1,0 +1,16 @@
+{"time":"2025-04-13T14:21:15.3189806+02:00","level":"INFO","msg":"stream: starting","core version":"0.19.9","symlink path":"C:\\Users\\benal\\OneDrive\\Bureau\\ChemBerta\\TEST1\\chemberta-regression\\wandb\\run-20250413_142115-xpy6jn83\\logs\\debug-core.log"}
+{"time":"2025-04-13T14:21:17.1093716+02:00","level":"INFO","msg":"created new stream","id":"xpy6jn83"}
+{"time":"2025-04-13T14:21:17.1093716+02:00","level":"INFO","msg":"stream: started","id":"xpy6jn83"}
+{"time":"2025-04-13T14:21:17.1093716+02:00","level":"INFO","msg":"writer: Do: started","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:21:17.1093716+02:00","level":"INFO","msg":"sender: started","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:21:17.1093716+02:00","level":"INFO","msg":"handler: started","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:21:17.2892783+02:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-04-13T14:28:42.6113782+02:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-04-13T14:28:42.6113782+02:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-04-13T14:28:43.3924699+02:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-04-13T14:28:43.5738201+02:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-04-13T14:28:43.5769253+02:00","level":"INFO","msg":"stream: closing","id":"xpy6jn83"}
+{"time":"2025-04-13T14:28:43.5769253+02:00","level":"INFO","msg":"handler: closed","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:28:43.5769253+02:00","level":"INFO","msg":"writer: Close: closed","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:28:43.5769253+02:00","level":"INFO","msg":"sender: closed","stream_id":"xpy6jn83"}
+{"time":"2025-04-13T14:28:43.5769253+02:00","level":"INFO","msg":"stream: closed","id":"xpy6jn83"}
